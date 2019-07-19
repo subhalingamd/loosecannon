@@ -1,0 +1,279 @@
+*{
+	box-sizing: border-box;
+}
+
+.audiowide{
+	font-family: "Audiowide";
+}
+
+.coda{
+	font-family: "Coda";
+}
+
+body{
+	font-family: Lato;
+	max-width: 100%;
+	display: none;
+	margin: 0;
+}
+
+
+
+header{
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	background-color: #000;
+	z-index: 5;
+}
+
+
+header .heading{
+	display: flex;
+	align-items: center;
+	padding: 9px;
+	user-select: none;
+}
+
+
+header .heading .logo{
+	height: 2.5em;
+	width: 2.5em;
+}
+
+header .heading .title{
+	font-family: "Audiowide";
+	margin-left: 6px;
+	font-size: 1.5em;
+	color: #fff;
+	white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+
+
+header .heading:hover .logo{
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+header .heading:hover .title{
+	color: #f1f1f1;
+	cursor: pointer;
+}
+
+#toggle{
+	position: relative;
+	display: none;
+	padding: 5px;
+	float: right;
+	cursor: pointer;
+	user-select: none;
+}
+
+ul.nav{
+	position: absolute;
+	right: 1%;
+	top: 25%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+
+ul.nav>li{
+	float: left;
+	cursor: pointer;
+}
+
+ul.nav li a{
+	font-family: "Coda";
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	padding: 3px 12px;
+	cursor: pointer;
+	color: #fff;
+}
+
+ul.nav li a:hover{
+	color: #bcbcbc;
+}
+
+ul.nav li a.selected{
+	color: #bcbcbc;
+}
+
+#toggle{
+	position: relative;
+	display: none;
+	padding: 12px;
+	float: right;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 750px){
+
+	#toggle {
+		display: inline-block;
+		float: right;
+	}
+
+	ul.nav{
+		position: relative;
+		display: none;
+		left: 0;
+	}
+
+	ul.nav li {
+		float: none;
+	}
+
+
+	ul.nav li a{
+		padding: 3px 15px;
+		display: block;
+	} 
+
+	ul.nav li a .nav-item{
+		display: inline-block;
+	}
+}
+
+div.tab{
+	position: fixed;
+	display: block;
+	width: 100%;
+	background-color: #dadada;
+	font-family: Coda;
+	margin-bottom: 25px;
+}
+
+div.tab .tog{
+	position: absolute;
+	right: 6px;
+}
+
+div.tab>a{
+	display: inline-block;
+	padding: 9px 15px;
+	text-decoration: none;
+
+}
+
+div.tab>a:hover,div.tab>a.selected{
+	background-color: #fff;
+}
+
+
+
+/*#############################################################################################*/
+ .container{
+ 	margin: 1%;
+ 	font-size: 1.15em;
+ }
+
+
+ h1,h2,h3,h4,h5{
+ 	font-family: Coda;
+ 	margin-bottom: 3px;
+ 	color: #222;
+ 	font-weight: lighter;
+ }
+
+
+
+
+/*#############################################################################################*/
+
+footer{
+	display: block;
+	padding: 5px 6px;
+	background-color: #000;
+	color: #fff;
+}
+
+footer.sticky{
+	position: sticky;
+	position: -webkit-sticky;
+	bottom: 0;
+	z-index: 5;
+}
+
+.social div{
+	display: inline-block;
+	padding: 0 6px;
+}
+
+
+.social div a{
+	display: inline-block;
+	color: #fff;
+	font-size: 1.25em;
+	text-decoration: none;
+}
+
+
+.social div a:hover{
+	color: #bcbcbc;
+}
+
+footer .site-map{
+	font-family: "Coda";
+	float: left;
+	width: 40%;
+	text-align: center;
+	padding: 12px;
+}
+
+footer .site-map a{
+	text-decoration: none;
+	display: block;
+	color: #fff;
+	padding: 3px;
+	font-size: 1.15em;
+}
+
+footer .site-map a:hover{
+	color: #bcbcbc;
+}
+
+
+footer .f-about{
+	float: left;
+	width: 50%;
+	font-size: 1.15em;
+	color: #f1f1f1;
+	padding: 12px 12px;
+}
+
+.f-about .ct-det{
+	display: inline-block;
+	padding: 6px 9px 0;
+}
+
+footer div:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+@media screen and (max-width: 750px){
+
+	.site-map,.f-about{
+		min-width: 100%;
+	}
+	.f-about .ct-det{
+		display: block;
+	}
+}
+
+footer hr{
+	color: #dadada;
+}
+
+.cpy{
+	font-family: "Coda";
+	color: #f1f1f1;
+	padding: 9px 0 15px;
+	text-align: center;
+}
