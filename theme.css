@@ -169,7 +169,6 @@ div.tab>a:hover,div.tab>a.selected{
 
 /*#############################################################################################*/
  .container{
- 	margin: 1%;
  	font-size: 1.15em;
  }
 
@@ -177,12 +176,157 @@ div.tab>a:hover,div.tab>a.selected{
  h1,h2,h3,h4,h5{
  	font-family: Coda;
  	margin-bottom: 3px;
+ 	margin-top: 3px;
  	color: #222;
  	font-weight: lighter;
  }
 
 
+.box .item-50{
+	float: left;
+	width: 50%;
+	max-height: 50vh;
+	overflow-y: scroll;
+	padding: 9px;
+	border: 1px solid #dadada;
+}
 
+.box:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+@media screen and (max-width: 750px){
+	.box .item-50{
+		width: 100%;
+		max-height: 75vh;
+	}
+}
+
+
+
+.team{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.team .mem {
+	padding: 1%;
+	display: inline-block;
+	width: 33.3333333%;
+	position: relative;
+	text-align: center;
+	border: 1px solid #dadada;
+}
+
+.team .mem img.mem-dp{
+	padding: 12px;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+}
+
+.team .mem .mem-name{
+	font-size: 1.5em;
+	text-transform: capitalize;
+	padding: 6px;
+}
+
+.team .mem .mem-pos{
+	padding: 3px;
+	color: #555555;
+	size: 0.8em;
+}
+
+.team .mem .mem-btn{
+	padding: 15px;
+	transform: rotate(180deg);
+}
+
+.team .mem .mem-btn a{
+	padding: 5px;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	cursor: pointer;
+
+}
+
+.team .mem .mem-btn a:hover{
+	color: Grey;
+}
+
+.team .mem .prof{
+	display: none;
+	height: 100%;
+	width: 100%;
+	z-index: 3;
+	background-color: #dddddd;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: left;
+
+}
+
+.team .mem .prof .header{
+	background-color: Black;
+	color: White;
+}
+
+.team .mem .prof .header .mem-name{
+	font-size: 1.25em;
+	max-height: 10%;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 75%;
+}
+
+.team .mem .prof .header .mem-close{
+	float: right;
+	display: inline-block;
+	color: White;
+	padding: 5px;
+}
+
+.team .mem .prof .header .mem-close a{
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.team .mem .prof .header .mem-close a:hover{
+	color: Grey;
+}
+
+.team .mem .prof .mem-intro{
+	max-height: 75%;
+	width: 90%;
+	padding: 5%;
+	text-align: justify;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.team .mem:hover {
+	background-color: #dddddd;
+}
+
+
+@media screen and (max-width: 650px){
+	.team{
+		flex-direction: column;
+	}
+
+	.team .mem{
+		width: 100%;
+	}
+}
 
 /*#############################################################################################*/
 
